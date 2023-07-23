@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stars {
+    background: #000 url(stars.png) repeat top center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -2;
+}
+
+.twinkling {
+    background: url(twinkling.png) repeat top center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    animation: move-stars 200s linear infinite;
+}
+
+@keyframes move-stars {
+    0% {background-position: 0 0;}
+    100% {background-position: -10000px 5000px;}
+}
+
+.system {
+    width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.orbita {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px white solid;
+    border-radius: 100%;
+    position: absolute;
+}
+
+.earth {
+    height: 500px;
+    width: 500px;
+    animation: spin 8s linear infinite;
+}
+
+.earth-img {
+    position: absolute;
+    top:50%;
+    left: -12px;
+    border-radius: 100%;
+    transform: translateY(-50%);
+}
+
+@keyframes spin {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+.mars {
+    height: 600px;
+    width: 600px;
+    animation: spin 11s linear infinite;
+}
+
+.mars-img {
+    position: absolute;
+    top: 50%;
+    left: -14px;
+    border-radius: 100%;
+    transform: translateY(-50%);
+}
+
+.sun-img, .mars-img, .earth-img {
+    animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+.venera {
+    width: 400px;
+    height: 400px;
+    animation: spin 6s linear infinite;
+}
+
+.venera-img {
+    position: absolute;
+    top: 50%;
+    left: -9px;
+    border-radius: 100%;
+    transform: translateY(-50%);
+}
+
+.merkuri {
+    animation: spin 5s linear infinite;
+    width: 300px;
+    height: 300px;
+}
+
+.merkuri-img {
+    position: absolute;
+    top: 50%;
+    left: -6px;
+    border-radius: 100%;
+    transform: translateY(-50%);
+}
+
+.jupiter {
+    width: 700px;
+    height: 700px;
+    animation: 13s spin linear infinite;
+}
+
+.jupiter-img {
+    position: absolute;
+    top: 50%;
+    left: -12px;
+    border-radius: 100%;
+    transform: translateY(-50%);
+}
+
+.saturn {
+    width: 800px;
+    height: 800px;
+    animation: 15s spin linear infinite;
+}
+
+.saturn-img {
+    position: absolute;
+    top: 50%;
+    left: -12px;
+    border-radius: 100%;
+    transform: translateY(-50%);
+}
+
+.uran {
+    width: 900px;
+    height: 900px;
+    animation: 17s spin linear infinite;
+}
+
+.uran-img {
+    position: absolute;
+    top: 50%;
+    left: -12px;
+    border-radius: 100%;
+    transform: translateY(-50%);
+}
+
+.neptun {
+    width: 1000px;
+    height: 1000px;
+    animation: 19s spin linear infinite;
+}
+
+.neptun-img {
+    position: absolute;
+    top: 50%;
+    left: -12px;
+    border-radius: 100%;
+    transform: translateY(-50%);
+}
